@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>하얀드림치과 | 38만원~ 정직한 임플란트</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <style>
+    :root {
+      --teal-deep: #00353b;
+      --teal-main: #00525a;
+      --teal-light: #13a39b;
+      --lime: #cbe053;
+      --bg-gray: #f4f6f8;
+      --text-dark: #191f28;
+      --text-mid: #4e5968;
+      --text-light: #8b95a1;
+      --border: #e5e8eb;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #e9ecef;
+      color: var(--text-dark);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page-wrap {
+      max-width: 480px;
+      margin: 0 auto;
+      background: #fff;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.12);
+      overflow-x: hidden;
+    }
+
+    section { padding: 48px 20px; position: relative; }
+    .bg-teal { background: var(--teal-main); color: #fff; }
+    .bg-teal-deep { background: var(--teal-deep); color: #fff; }
+    .bg-gray { background: var(--bg-gray); }
+    .bg-white { background: #fff; }
+
+    .sec-tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--teal-light);
+      margin-bottom: 6px;
+      letter-spacing: 0.02em;
+    }
+    .bg-teal .sec-tag, .bg-teal-deep .sec-tag { color: var(--lime); }
+
+    .sec-title {
+      font-size: 23px;
+      font-weight: 800;
+      line-height: 1.38;
+      letter-spacing: -0.03em;
+      margin-bottom: 10px;
+      word-break: keep-all;
+    }
+    .sec-desc {
+      font-size: 14.5px;
+      color: var(--text-mid);
+      line-height: 1.6;
+      margin-bottom: 22px;
+      word-break: keep-all;
+    }
+    .bg-teal .sec-desc, .bg-teal-deep .sec-desc { color: rgba(255, 255, 255, 0.85); }
+    .text-center { text-align: center; }
+    .highlight-teal { color: var(--teal-light); }
+    .highlight-lime { color: var(--lime); }
+
+    /* 미디어 박스 */
+    .media-box {
+      width: 100%;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #dce5e8;
+      position: relative;
+    }
+    .media-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* WHY WORRY? 자동재생 영상 컨테이너 */
+    .worry-video-wrap {
+      position: relative;
+      width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #0d1b1e;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+    .worry-video-wrap video {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+    .video-caption-bubble {
+      position: absolute;
+      left: 14px;
+      bottom: 16px;
+      background: rgba(0, 53, 59, 0.88);
+      color: #fff;
+      padding: 7px 14px;
+      border-radius: 99px;
+      font-size: 12px;
+      font-weight: 700;
+      backdrop-filter: blur(4px);
+      pointer-events: none;
+    }
+
+    @keyframes floatY {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-4px); }
+    }
+
+    /* 빤짝빤짝 버튼 애니메이션 */
+    .btn-shine {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #10b3a9 0%, #19c7b8 50%, #0d9488 100%) !important;
+      color: #fff !important;
+      box-shadow: 0 0 0 0 rgba(203, 224, 83, 0.55);
+      animation: pulseGlow 2.2s infinite;
+    }
+    .btn-shine::after {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -80%;
+      width: 45%;
+      height: 200%;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.58) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: skewX(-24deg);
+      animation: shineSweep 2.4s ease-in-out infinite;
+      pointer-events: none;
+    }
+    @keyframes shineSweep {
+      0% { left: -80%; }
+      45%, 100% { left: 140%; }
+    }
+    @keyframes pulseGlow {
+      0% { box-shadow: 0 0 0 0 rgba(203, 224, 83, 0.55); }
+      70% { box-shadow: 0 0 0 10px rgba(203, 224, 83, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(203, 224, 83, 0); }
+    }
+
+    /* 1. HERO */
+    .hero {
+      background: linear-gradient(155deg, #003e45 0%, #005f67 60%, #0c8a8c 100%);
+      color: #fff;
+      padding: 24px 20px 44px;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      bottom: -22px;
+      left: -10%;
+      width: 120%;
+      height: 44px;
+      background: var(--bg-gray);
+      border-radius: 50% 50% 0 0;
+    }
+    .hero-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      font-size: 14px;
+      font-weight: 800;
+    }
+    .hero-headline {
+      font-size: 24px;
+      font-weight: 800;
+      line-height: 1.38;
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
+      word-break: keep-all;
+    }
+    .hero-price {
+      font-size: 68px;
+      font-weight: 900;
+      color: var(--lime);
+      line-height: 1.0;
+      letter-spacing: -0.05em;
+      margin-bottom: 12px;
+      text-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+    }
+    .hero-price span {
+      font-size: 28px;
+      font-weight: 800;
+      margin-left: 2px;
+      letter-spacing: -0.02em;
+    }
+    .hero-sub {
+      font-size: 14.5px;
+      color: rgba(255, 255, 255, 0.92);
+      margin-bottom: 22px;
+      word-break: keep-all;
+      line-height: 1.6;
+    }
+
+    .hero-icon-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 2;
+    }
+    .hero-icon-card {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 14px;
+      padding: 14px 6px;
+      text-align: center;
+    }
+    .hero-icon-thumb {
+      width: 46px;
+      height: 46px;
+      margin: 0 auto 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: floatY 2.8s ease-in-out infinite;
+    }
+    .hero-icon-card:nth-child(2) .hero-icon-thumb { animation-delay: 0.4s; }
+    .hero-icon-card:nth-child(3) .hero-icon-thumb { animation-delay: 0.8s; }
+    .hero-icon-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    /* hero-cost.svg 시각적 크기 보정 (hero-torque, hero-diameter와 비율 맞춤) */
+    .hero-icon-thumb img.icon-cost {
+      transform: scale(2.56);
+    }
+    .hero-icon-card strong {
+      display: block;
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--lime);
+      margin-bottom: 2px;
+    }
+    .hero-icon-card span {
+      display: block;
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.88);
+      line-height: 1.3;
+    }
+
+    .hero-btns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      position: relative;
+      z-index: 2;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 48px;
+      border-radius: 10px;
+      font-size: 14.5px;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-dark { background: #0d1b1e; color: #fff; }
+    .btn-white { background: #fff; color: var(--teal-deep); }
+    .btn-teal { background: var(--teal-light); color: #fff; }
+
+    /* 2. EMPATHY */
+    .pill-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .pill-item {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-dark);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    }
+    .pill-item span { color: var(--teal-light); font-size: 16px; }
+
+    /* 2-1. 자연치아 보존 (꼭 발치하지 않습니다) */
+    .preserve-card {
+      background: linear-gradient(180deg, #f3faf9 0%, #ffffff 100%);
+      border: 1.5px solid #cdebe8;
+      border-radius: 20px;
+      padding: 28px 22px;
+      text-align: center;
+    }
+    .preserve-icon {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 14px;
+      border-radius: 16px;
+      background: #e1f5f3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--teal-main);
+    }
+    .preserve-quote {
+      font-size: 19px;
+      font-weight: 800;
+      color: var(--text-dark);
+      line-height: 1.45;
+      margin-bottom: 14px;
+      word-break: keep-all;
+    }
+    .preserve-text {
+      font-size: 14.5px;
+      color: var(--text-mid);
+      line-height: 1.7;
+      margin-bottom: 18px;
+      word-break: keep-all;
+    }
+    .preserve-highlight {
+      background: var(--teal-main);
+      color: #fff;
+      border-radius: 14px;
+      padding: 16px 14px;
+      font-size: 14.5px;
+      font-weight: 700;
+      line-height: 1.6;
+      word-break: keep-all;
+    }
+    .preserve-highlight strong {
+      color: var(--lime);
+      font-weight: 800;
+    }
+
+    /* 3. DOCTOR + CAREER */
+    .doctor-card {
+      background: var(--bg-gray);
+      border-radius: 18px;
+      padding: 22px 18px;
+      text-align: center;
+    }
+    .doctor-photo {
+      width: 210px;
+      margin: 0 auto 14px;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .doctor-photo img { width: 100%; height: auto; display: block; }
+    .doctor-name {
+      font-size: 19px;
+      font-weight: 800;
+      color: var(--teal-main);
+      margin-bottom: 4px;
+    }
+    .doctor-sub {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--text-light);
+      margin-bottom: 12px;
+    }
+    .doctor-points {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+    .doctor-points span {
+      background: #fff;
+      border: 1px solid var(--border);
+      padding: 5px 10px;
+      border-radius: 99px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-mid);
+    }
+    .career-box {
+      background: #fff;
+      border-radius: 14px;
+      padding: 16px;
+      text-align: left;
+      border: 1px solid var(--border);
+    }
+    .career-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      font-size: 13px;
+      color: var(--text-mid);
+      line-height: 1.5;
+    }
+    .career-list li {
+      padding-left: 14px;
+      position: relative;
+      word-break: keep-all;
+    }
+    .career-list li::before {
+      content: "·";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--teal-light);
+      font-weight: 900;
+      font-size: 16px;
+      line-height: 1.2;
+    }
+
+    /* 3-1. PROCESS (임플란트 진행 과정) */
+    .process-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      position: relative;
+    }
+    .process-step {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px 16px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+      position: relative;
+    }
+    .process-icon-box {
+      width: 54px;
+      height: 54px;
+      flex-shrink: 0;
+      border-radius: 14px;
+      background: #eaf7f6;
+      color: var(--teal-main);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .process-body {
+      flex: 1;
+      text-align: left;
+    }
+    .process-num {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--teal-light);
+      background: #e6f7f5;
+      padding: 2px 8px;
+      border-radius: 99px;
+      margin-bottom: 4px;
+    }
+    .process-body h3 {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 3px;
+    }
+    .process-body p {
+      font-size: 13px;
+      color: var(--text-mid);
+      line-height: 1.5;
+      word-break: keep-all;
+    }
+    .process-arrow {
+      text-align: center;
+      color: var(--teal-light);
+      font-size: 14px;
+      line-height: 1;
+      margin: -4px 0;
+      font-weight: 900;
+    }
+
+    /* 4. 3 EASY PROMISES */
+    .promise-list { display: flex; flex-direction: column; gap: 16px; }
+    .promise-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 16px;
+      padding: 18px;
+    }
+    .promise-card h3 { font-size: 17px; font-weight: 800; color: var(--lime); margin-bottom: 6px; }
+    .promise-card p { font-size: 13.5px; color: rgba(255, 255, 255, 0.88); margin-bottom: 14px; word-break: keep-all; }
+
+    /* 5. PRICE */
+    .price-list { display: flex; flex-direction: column; gap: 10px; }
+    .price-row {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .price-row.featured { border: 2px solid var(--teal-light); background: #f2fbfa; }
+    .price-row strong { font-size: 15px; }
+    .price-row small { display: block; font-size: 12px; color: var(--text-light); margin-top: 2px; }
+    .price-val { font-size: 18px; font-weight: 900; color: var(--teal-main); }
+    .price-row.featured .price-val { font-size: 23px; color: var(--teal-deep); }
+
+    /* 6. REVIEWS & FAQ */
+    .review-row {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      padding-bottom: 8px;
+      margin-bottom: 28px;
+      scroll-snap-type: x mandatory;
+    }
+    .review-card {
+      min-width: 260px;
+      background: var(--bg-gray);
+      border-radius: 14px;
+      padding: 16px;
+      scroll-snap-align: center;
+    }
+    .review-stars { color: #f59f00; font-size: 12px; margin-bottom: 6px; }
+    .review-card p { font-size: 13.5px; color: var(--text-dark); line-height: 1.55; margin-bottom: 8px; word-break: keep-all; }
+    .review-card span { font-size: 11px; color: var(--text-light); font-weight: 600; }
+
+    .faq-list { display: flex; flex-direction: column; gap: 8px; }
+    .faq-item { background: #fff; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+    .faq-q {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      text-align: left;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-dark);
+      cursor: pointer;
+      word-break: keep-all;
+    }
+    .faq-a {
+      display: none;
+      padding: 0 16px 16px;
+      font-size: 13.5px;
+      color: var(--text-mid);
+      line-height: 1.65;
+      word-break: keep-all;
+    }
+    .faq-a p + p { margin-top: 8px; }
+    .faq-item.open .faq-a { display: block; }
+    .faq-item.open .faq-arrow { transform: rotate(180deg); }
+    .faq-arrow { transition: transform 0.2s; font-size: 11px; color: var(--text-light); flex-shrink: 0; }
+
+    /* 7. CONSULTATION FORM */
+    .consult-form { display: flex; flex-direction: column; gap: 10px; }
+    .form-input, .form-select {
+      width: 100%;
+      height: 44px;
+      border-radius: 8px;
+      border: none;
+      padding: 0 14px;
+      font-size: 14px;
+      font-family: inherit;
+    }
+    .phone-group { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; }
+    .agree-box {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 12px;
+    }
+    .agree-box label { display: flex; align-items: center; gap: 6px; cursor: pointer; }
+
+    /* 8. LOCATION & FOOTER */
+    .map-wrap {
+      display: grid;
+      grid-template-columns: 1fr 92px;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .map-box {
+      height: 160px;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #eef3f5;
+    }
+    .map-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .map-btns { display: flex; flex-direction: column; gap: 8px; }
+    .btn-naver { background: #03c75a; color: #fff; flex: 1; font-size: 12px; }
+    .btn-kakao { background: #fee500; color: #191919; flex: 1; font-size: 12px; }
+    .location-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      font-size: 12px;
+      line-height: 1.7;
+      word-break: keep-all;
+    }
+    .hours-box { background: rgba(0, 0, 0, 0.25); border-radius: 10px; padding: 12px; }
+
+    footer {
+      background: #0b1113;
+      color: #8b95a1;
+      padding: 28px 20px 88px;
+      font-size: 11px;
+      line-height: 1.75;
+      word-break: keep-all;
+    }
+    footer strong { color: #fff; font-size: 14px; display: block; margin-bottom: 6px; }
+
+    .floating-bar {
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 480px;
+      background: #00282d;
+      padding: 10px 16px;
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 8px;
+      z-index: 99;
+      box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.22);
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrap">
+
+    <!-- 1. HERO -->
+    <section class="hero">
+      <div class="hero-top">
+        <span>하얀드림치과</span>
+        <span>043-900-5252</span>
+      </div>
+      <h1 class="hero-headline">
+        임플란트는 <span class="highlight-lime">의료진 실력</span>이<br>
+        가장 중요합니다.
+      </h1>
+      <div class="hero-price">38<span>만원~</span></div>
+      <p class="hero-sub">
+        인공 뿌리부터 겉 치아까지 정품 사용.<br>
+        <strong>전문의 6인이 책임집니다.</strong>
+      </p>
+
+      <div class="hero-icon-grid">
+        <div class="hero-icon-card">
+          <div class="hero-icon-thumb">
+            <img src="./hero-torque.svg" alt="흔들림 없는 고정" />
+          </div>
+          <strong>단단한 고정</strong>
+          <span>흔들림 없이<br>오래 씹는 힘</span>
+        </div>
+        <div class="hero-icon-card">
+          <div class="hero-icon-thumb">
+            <img src="./hero-diameter.svg" alt="내 잇몸뼈 맞춤 크기" />
+          </div>
+          <strong>내 뼈 맞춤</strong>
+          <span>잇몸뼈에 딱 맞는<br>안전한 크기</span>
+        </div>
+        <div class="hero-icon-card">
+          <div class="hero-icon-thumb">
+            <img src="./hero-cost.svg" class="icon-cost" alt="거품 뺀 38만원" />
+          </div>
+          <strong>38만원~</strong>
+          <span>추가 비용 걱정 없는<br>투명한 가격</span>
+        </div>
+      </div>
+
+      <div class="hero-btns">
+        <a href="tel:043-900-5252" class="btn btn-dark">전화 상담하기</a>
+        <a href="#consult" class="btn btn-white">38만원 비용 확인</a>
+      </div>
+    </section>
+
+    <!-- 2. WHY WORRY? + 자동재생 잇몸뼈 변화 영상 -->
+    <section class="bg-gray">
+      <span class="sec-tag">WHY WORRY?</span>
+      <h2 class="sec-title">혹시 이런 걱정 때문에<br>임플란트를 미루고 계신가요?</h2>
+      <div class="pill-list">
+        <div class="pill-item"><span>✔</span> “광고는 싼데, 막상 가면 추가 비용이 폭탄일까 봐...”</div>
+        <div class="pill-item"><span>✔</span> “수술할 때 너무 아프고 얼굴이 퉁퉁 부을까 봐...”</div>
+        <div class="pill-item"><span>✔</span> “몇 년 못 쓰고 빠지거나, 부작용이 생길까 봐...”</div>
+      </div>
+
+      <!-- 자동재생 영상 (worry-bone-loss.webm / worry-bone-loss.mp4) -->
+      <div class="worry-video-wrap">
+        <video
+          poster="./worry-bone-loss.jpg"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+        >
+          <source src="./worry-bone-loss.webm" type="video/webm" />
+          <source src="./worry-bone-loss.mp4" type="video/mp4" />
+        </video>
+        <div class="video-caption-bubble">고민하는 사이 잇몸뼈는 조금씩 약해집니다</div>
+      </div>
+    </section>
+
+    <!-- 2-1. 자연치아 보존 철학 (꼭 발치하지 않습니다) -->
+    <section class="bg-white">
+      <div class="preserve-card">
+        <div class="preserve-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="m9 12 2 2 4-4"/>
+          </svg>
+        </div>
+        <span class="sec-tag">NATURAL TEETH FIRST</span>
+        <h2 class="sec-title" style="margin-bottom: 14px;">걱정마세요.<br>꼭 발치하진 않습니다.</h2>
+        <p class="preserve-quote">
+          내 치아,<br>
+          정말 뽑아야 하는 걸까?
+        </p>
+        <p class="preserve-text">
+          걱정되시는 게 당연합니다.<br>
+          한번 뽑으면 다시 돌아오지 않으니까요.
+        </p>
+        <div class="preserve-highlight">
+          <strong>자연치아를 살릴 수 있는 방법이 있는지,</strong><br>
+          먼저 충분히 검토한 후에 판단해 드립니다.
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. DOCTOR & CAREER -->
+    <section class="bg-gray">
+      <span class="sec-tag">TRUST</span>
+      <h2 class="sec-title">임플란트는 의료진 실력이<br>가장 중요합니다.<br><span class="highlight-teal">전문의 6인</span>이 책임집니다.</h2>
+      <p class="sec-desc">
+        같은 재료를 써도 누가, 얼마나 정확하게 심느냐에 따라 수명이 달라집니다. 조은정 대표원장을 비롯한 전문의 6인이 체계적인 협진으로 정밀하게 치료합니다.
+      </p>
+
+      <div class="doctor-card" style="background: #fff; border: 1px solid var(--border);">
+        <div class="doctor-photo">
+          <img src="./대표원장 프로필 사진.png" alt="하얀드림치과 조은정 대표원장" />
+        </div>
+        <div class="doctor-name">조은정 대표원장</div>
+        <div class="doctor-sub">보건복지부 인증 통합치의학과 전문의</div>
+        <div class="doctor-points">
+          <span>전문의 6인 협진</span>
+          <span>과잉진료 없음</span>
+          <span>내 치아 최대한 살리기</span>
+        </div>
+        <div class="career-box" style="background: var(--bg-gray);">
+          <ul class="career-list">
+            <li>서울대학교 치의학 석사 수료</li>
+            <li>서울대학교 치과병원 전공의 수료</li>
+            <li>보건복지부 인증 통합치의학과 전문의</li>
+            <li>덴티스 임플란트 임상 자문의사</li>
+            <li>미국 HARVARD 대학 CME 과정 수료</li>
+            <li>미국 UPENN 치과대학 근관치료학 과정 수료</li>
+            <li>서울대학교 치과병원 임플란트 연수회 수료</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3-1. 임플란트 진행 과정 -->
+    <section class="bg-white">
+      <span class="sec-tag">PROCESS</span>
+      <h2 class="sec-title">임플란트 진행 과정</h2>
+      <p class="sec-desc">
+        처음 오시는 분도 안심하실 수 있도록,<br>
+        전 과정을 투명하게 안내합니다.
+      </p>
+
+      <div class="process-list">
+        <div class="process-step">
+          <div class="process-icon-box" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+              <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+              <path d="M9 12h6"/>
+              <path d="M9 16h4"/>
+            </svg>
+          </div>
+          <div class="process-body">
+            <span class="process-num">STEP 01</span>
+            <h3>처음 내원</h3>
+            <p>불편한 치아 상태와 전신 건강, 복용 중인 약물 등을 꼼꼼하게 확인하고 1:1 문진을 진행합니다.</p>
+          </div>
+        </div>
+
+        <div class="process-arrow">↓</div>
+
+        <div class="process-step">
+          <div class="process-icon-box" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="7"/>
+              <path d="m21 21-4.35-4.35"/>
+              <path d="M11 8v6"/>
+              <path d="M8 11h6"/>
+            </svg>
+          </div>
+          <div class="process-body">
+            <span class="process-num">STEP 02</span>
+            <h3>정밀 진단</h3>
+            <p>3D CT 등 정밀 검사를 통해 잇몸뼈의 양과 신경 위치를 파악하고, 자연치아 보존 가능성부터 검토합니다.</p>
+          </div>
+        </div>
+
+        <div class="process-arrow">↓</div>
+
+        <div class="process-step">
+          <div class="process-icon-box" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v4"/>
+              <path d="M9 6h6"/>
+              <path d="M8 10h8l-1 10a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2L8 10z"/>
+              <path d="M9 14h6"/>
+              <path d="M9.5 18h5"/>
+            </svg>
+          </div>
+          <div class="process-body">
+            <span class="process-num">STEP 03</span>
+            <h3>임플란트 수술</h3>
+            <p>전문의의 맞춤 계획에 따라 통증과 붓기를 최소화하는 방식으로 정확하고 안전하게 식립합니다.</p>
+          </div>
+        </div>
+
+        <div class="process-arrow">↓</div>
+
+        <div class="process-step">
+          <div class="process-icon-box" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <path d="m9 12 2 2 4-4"/>
+            </svg>
+          </div>
+          <div class="process-body">
+            <span class="process-num">STEP 04</span>
+            <h3>유지관리</h3>
+            <p>보철물 장착 후에도 정기적인 검진과 구강 위생 관리로 임플란트를 오래 건강하게 쓰실 수 있도록 돕습니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. 3 EASY PROMISES -->
+    <section class="bg-teal">
+      <span class="sec-tag">3 PROMISES</span>
+      <h2 class="sec-title">가격은 낮추고,<br><span class="highlight-lime">안심할 3가지</span>는 지켰습니다</h2>
+      <div class="promise-list">
+        <div class="promise-card">
+          <h3>01. 덜 아프고, 덜 붓게</h3>
+          <p>잇몸을 아주 조금만 열고 심기 때문에 피가 적게 나고 회복이 빠릅니다. 주사 전 바르는 마취로 따끔함까지 줄였습니다.</p>
+          <div class="media-box">
+            <img src="./사진01.jpg" alt="덜 아프고 덜 붓는 편안한 진료" />
+          </div>
+        </div>
+
+        <div class="promise-card">
+          <h3>02. 100% 정품 재료 + 보증서</h3>
+          <p>식약처에서 인증받은 정품 인공 뿌리와 연결 기둥만 사용합니다. 시술 후 정품 보증서를 직접 챙겨드립니다.</p>
+          <div class="media-box">
+            <img src="./사진02.png" alt="100% 정품 임플란트 보증서" />
+          </div>
+        </div>
+
+        <div class="promise-card">
+          <h3>03. 꼭 필요한 치료만 정직하게</h3>
+          <p>살릴 수 있는 치아는 최대한 살립니다. 뼈이식이 정말 필요한 경우에만 미리 설명드리고 진행합니다.</p>
+          <div class="media-box">
+            <img src="./사진03.jpg" alt="꼭 필요한 치료만 정직하게 진행하는 하얀드림치과" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. TRANSPARENT PRICE -->
+    <section class="bg-gray">
+      <span class="sec-tag">PRICE</span>
+      <h2 class="sec-title">숨기는 것 없는 투명한 비용</h2>
+      <p class="sec-desc">내원 전 보신 기준 그대로 정직하게 안내해 드립니다.</p>
+      <div class="price-list">
+        <div class="price-row featured">
+          <div><strong>국산 정품 임플란트</strong><small>인공 뿌리 + 연결 기둥 + 겉 치아 포함</small></div>
+          <span class="price-val">38만원~</span>
+        </div>
+        <div class="price-row">
+          <div><strong>오스템 정품 임플란트</strong><small>뼈와 잘 붙는 오스템 정품</small></div>
+          <span class="price-val">별도 문의</span>
+        </div>
+        <div class="price-row">
+          <div><strong>만 65세 이상 건강보험</strong><small>평생 2개까지 본인부담 30%</small></div>
+          <span class="price-val">보험 적용</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. SHORT REVIEWS & FAQ -->
+    <section class="bg-white">
+      <span class="sec-tag">REVIEWS &amp; FAQ</span>
+      <h2 class="sec-title">다녀가신 분들의 솔직한 이야기</h2>
+      <div class="review-row">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p>“추가 비용 강요가 전혀 없었어요. 원장님이 꼭 필요한 것만 쉽게 설명해 주셔서 믿고 했습니다.”</p>
+          <span>50대 김OO님 · 어금니 임플란트</span>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p>“치과가 너무 무서워서 미뤘는데 생각보다 안 아프고 붓기도 금방 빠져서 진작 할 걸 그랬어요.”</p>
+          <span>60대 박OO님 · 건강보험 임플란트</span>
+        </div>
+      </div>
+
+      <h3 style="font-size:17px; font-weight:800; margin-bottom:12px;">자주 묻는 질문</h3>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q">Q. 38만원 외에 추가 비용이 생기나요?<span class="faq-arrow">▼</span></button>
+          <div class="faq-a">
+            <p>기본 식립은 38만원부터이며, 잇몸뼈가 부족해 뼈이식이 필요한 경우에만 시술 전 미리 정확히 안내해 드립니다.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Q. 고혈압·당뇨가 있어도 할 수 있나요?<span class="faq-arrow">▼</span></button>
+          <div class="faq-a">
+            <p>약으로 수치가 잘 조절되고 있다면 잇몸을 아주 조금만 여는 방식으로 안전하게 받으실 수 있습니다.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Q. 만 65세 이상 건강보험 적용되나요?<span class="faq-arrow">▼</span></button>
+          <div class="faq-a">
+            <p>네, 치아가 일부 남아 있는 만 65세 이상 어르신은 평생 2개까지 30% 비용만 부담하시면 됩니다.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Q. 틀니와 임플란트 중 뭐가 더 나은가요?<span class="faq-arrow">▼</span></button>
+          <div class="faq-a">
+            <p>대부분의 경우에는 임플란트가 씹는 힘, 고정감, 편의성 면에서 유리합니다. 하지만 틀니가 무조건 나쁜 치료라는 뜻은 아닙니다.</p>
+            <p>전신질환이 심해 수술 부담이 크거나, 잇몸뼈가 매우 부족하거나, 비용과 치료 기간을 고려해야 하는 경우에는 틀니가 현실적인 대안이 될 수 있습니다.</p>
+            <p>또 치아가 전혀 없는 경우에는 임플란트를 2~4개 정도 심고 그 위에 틀니를 연결하는 ‘임플란트 틀니’ 방식도 있습니다. 일반 틀니보다 고정감을 높이면서도 전체 임플란트보다 부담을 줄이는 절충안이 될 수 있습니다.</p>
+            <p>따라서 틀니와 임플란트 중 어느 쪽이 더 좋은지는 환자의 구강 상태, 건강 상태, 비용, 기대하는 씹는 힘과 편의성에 따라 달라집니다.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Q. 브릿지와 임플란트 중 뭐가 더 좋은가요?<span class="faq-arrow">▼</span></button>
+          <div class="faq-a">
+            <p>임플란트는 빠진 치아 양옆의 자연치아를 많이 삭제하지 않아도 된다는 장점이 있습니다. 그래서 임플란트가 보편화된 이후, 한 개 치아 결손에서 브릿지를 선택하는 경우는 예전보다 줄었습니다.</p>
+            <p>하지만 브릿지가 무조건 오래된 치료이거나 나쁜 치료라는 뜻은 아닙니다. 양옆 치아가 이미 크게 손상되어 크라운이 필요한 경우, 임플란트 수술이 어렵거나 치료 기간이 부담되는 경우, 앞니 심미보철을 함께 계획해야 하는 경우에는 브릿지가 적절한 선택이 될 수 있습니다.</p>
+            <p>임플란트와 브릿지는 각각 장단점이 있으므로, 주변 치아 상태, 잇몸뼈 상태, 치료 기간, 비용, 심미적 요구를 함께 고려해 결정하는 것이 좋습니다.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Q. 흔들리는 치아는 무조건 발치해야 하나요?<span class="faq-arrow">▼</span></button>
+          <div class="faq-a">
+            <p>꼭 그렇지는 않습니다. 사람의 치아는 정상적인 상태에서도 아주 미세하게 움직일 수 있습니다. 또 정상 범위를 넘어 약간 흔들리더라도, 원인과 정도에 따라 잇몸치료, 교합조정, 스플린트 등으로 관리할 수 있는 경우가 있습니다.</p>
+            <p>하지만 심한 치주염으로 잇몸뼈가 많이 녹고 치아가 크게 흔들리는 경우에는 발치가 필요할 수 있습니다.</p>
+            <p>발치가 필요한 치아를 너무 오래 방치하면 염증이 주변 잇몸뼈를 더 손상시킬 수 있습니다. 이 경우 나중에 임플란트를 하더라도 뼈이식이 더 많이 필요하거나, 치료 난이도가 높아질 수 있습니다.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Q. 이를 살릴 수는 없나요?<span class="faq-arrow">▼</span></button>
+          <div class="faq-a">
+            <p>이를 살릴 수 있는지는 크게 세 가지를 봅니다.<br>
+            첫째, 치아가 얼마나 흔들리는지.<br>
+            둘째, 염증이나 잇몸뼈 손상이 얼마나 심한지.<br>
+            셋째, 충치나 파절 후 남아 있는 치아가 얼마나 되는지.</p>
+            <p>잇몸질환으로 치아가 약간 흔들리는 경우에는 잇몸치료, 교합조정, 스플린트 같은 치료로 증상이 완화되거나 치아를 더 오래 유지할 수 있는 경우가 있습니다.</p>
+            <p>충치나 파절로 치아 머리 부분이 많이 손상된 경우에도, 뿌리와 남은 치아 구조가 충분하다면 기둥을 세우고 크라운을 씌워 보존할 수 있습니다.</p>
+            <p>다만 치아를 살릴 수 있는지는 정도의 문제이므로, 실제 상태를 보지 않고 단정하기는 어렵습니다. 정확한 판단은 치과 검진 후 결정하는 것이 좋습니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. QUICK CONSULTATION -->
+    <section class="bg-teal" id="consult">
+      <div class="text-center">
+        <span class="sec-tag">FREE CONSULTATION</span>
+        <h2 class="sec-title">미룰수록 잇몸뼈는<br>조금씩 줄어듭니다</h2>
+        <p class="sec-desc">연락처만 남겨주시면 내 치아에 맞는 정확한 비용을<br>부담 없이 안내해 드립니다.</p>
+      </div>
+      <form class="consult-form" id="consultForm">
+        <input type="text" class="form-input" name="name" placeholder="성함을 입력해 주세요" required />
+        <div class="phone-group">
+          <input type="tel" class="form-input" name="p1" value="010" maxlength="3" required />
+          <input type="tel" class="form-input" name="p2" placeholder="0000" maxlength="4" required />
+          <input type="tel" class="form-input" name="p3" placeholder="0000" maxlength="4" required />
+        </div>
+        <select class="form-select" name="subject">
+          <option value="38만원 임플란트">38만원 임플란트 상담</option>
+          <option value="만65세 건강보험">만 65세 이상 건강보험 임플란트</option>
+          <option value="뼈이식/재수술">뼈이식 · 재수술 상담</option>
+        </select>
+        <div class="agree-box">
+          <label><input type="checkbox" required /> [필수] 개인정보 수집 및 이용 동의</label>
+        </div>
+        <button type="submit" class="btn btn-shine" style="width:100%; height:54px; font-size:16px; margin-top:4px;">무료 비용 상담 신청하기</button>
+      </form>
+    </section>
+
+    <!-- 8. LOCATION & FOOTER -->
+    <section class="bg-teal-deep">
+      <span class="sec-tag">LOCATION</span>
+      <h2 class="sec-title">하얀드림치과 오시는 길</h2>
+      <div class="map-wrap">
+        <div class="map-box">
+          <img src="./사진04.jpg" alt="하얀드림치과 오시는 길 약도" />
+        </div>
+        <div class="map-btns">
+          <a href="https://naver.me/GvcPoCP4" target="_blank" rel="noopener noreferrer" class="btn btn-naver">네이버 지도</a>
+          <a href="https://place.map.kakao.com/1857235341" target="_blank" rel="noopener noreferrer" class="btn btn-kakao">카카오맵</a>
+        </div>
+      </div>
+      <div class="location-info">
+        <div>
+          <strong>주소</strong><br>
+          충청북도 청주시 흥덕구 오송읍 오송생명8로 175 다니엘프라자 4층<br><br>
+          <strong>대표전화</strong><br>
+          043-900-5252
+        </div>
+        <div class="hours-box">
+          <strong>진료시간</strong><br>
+          평일 09:30 - 18:30<br>
+          토요일 09:30 - 14:00<br>
+          점심 13:00 - 14:00<br>
+          일·공휴일 휴진
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <strong>하얀드림치과의원</strong>
+      대표자 : 조은정 | 사업자등록번호 : 614-55-00793<br>
+      주소 : 충청북도 청주시 흥덕구 오송읍 오송생명8로 175 다니엘프라자 4층 | 대표전화 : 043-900-5252<br>
+      ※ 모든 시술은 개인에 따라 염증, 출혈 등의 부작용이 발생할 수 있으므로 의료진과 충분한 상담이 필요합니다.<br><br>
+      COPYRIGHT © 하얀드림치과의원. ALL RIGHTS RESERVED.
+    </footer>
+
+    <!-- 하단 고정 바 -->
+    <div class="floating-bar">
+      <a href="tel:043-900-5252" class="btn btn-dark" style="height:44px;">전화상담</a>
+      <a href="#consult" class="btn btn-shine" style="height:44px;">38만원 빠른상담</a>
+    </div>
+
+  </div>
+
+  <script>
+    // FAQ 아코디언
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+
+    // 모바일 저전력 모드 등 예외 상황 자동재생 보조
+    document.addEventListener('DOMContentLoaded', () => {
+      const vid = document.querySelector('.worry-video-wrap video');
+      if (vid) {
+        vid.play().catch(() => {});
+      }
+    });
+
+    // 상담 폼 제출 처리
+    document.getElementById('consultForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = new FormData(this);
+      const name = formData.get('name');
+      const phone = `${formData.get('p1')}-${formData.get('p2')}-${formData.get('p3')}`;
+      alert(`${name}님(${phone}) 상담 신청이 완료되었습니다. 빠르게 연락드리겠습니다.`);
+      this.reset();
+    });
+  </script>
+</body>
+</html>
