@@ -35,6 +35,7 @@
       background: #fff;
       box-shadow: 0 0 40px rgba(0, 0, 0, 0.12);
       overflow-x: hidden;
+      padding-bottom: 64px;
     }
 
     section { padding: 48px 20px; position: relative; }
@@ -359,19 +360,12 @@
 
     /* 3. DOCTOR */
     .doctor-card {
-      background: var(--bg-gray);
+      background: #fff;
+      border: 1px solid var(--border);
       border-radius: 18px;
       padding: 22px 18px;
       text-align: center;
     }
-    .doctor-photo {
-      width: 210px;
-      margin: 0 auto 16px;
-      border-radius: 16px;
-      overflow: hidden;
-      background: #fff;
-    }
-    .doctor-photo img { width: 100%; height: auto; display: block; }
     .doctor-points {
       display: flex;
       flex-wrap: wrap;
@@ -558,56 +552,6 @@
       word-break: keep-all;
     }
 
-    /* 8. LOCATION & FOOTER */
-    .map-wrap {
-      display: grid;
-      grid-template-columns: 1fr 92px;
-      gap: 8px;
-      margin-bottom: 16px;
-    }
-    .map-box {
-      height: 160px;
-      border-radius: 10px;
-      overflow: hidden;
-      background: #eef3f5;
-    }
-    .map-box img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    .map-btns { display: flex; flex-direction: column; gap: 8px; }
-    .btn-naver { background: #03c75a; color: #fff; flex: 1; font-size: 12px; }
-    .btn-kakao { background: #fee500; color: #191919; flex: 1; font-size: 12px; }
-    .location-info {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      font-size: 12px;
-      line-height: 1.7;
-      word-break: keep-all;
-    }
-    .hours-box { background: rgba(0, 0, 0, 0.25); border-radius: 10px; padding: 12px; }
-    .nonpay-link {
-      display: inline-block;
-      margin-top: 6px;
-      color: var(--lime);
-      font-size: 12px;
-      font-weight: 700;
-      text-decoration: underline;
-    }
-
-    footer {
-      background: #0b1113;
-      color: #8b95a1;
-      padding: 28px 20px 88px;
-      font-size: 11px;
-      line-height: 1.75;
-      word-break: keep-all;
-    }
-    footer strong { color: #fff; font-size: 14px; display: block; margin-bottom: 6px; }
-
     .floating-bar {
       position: fixed;
       bottom: 0;
@@ -732,10 +676,7 @@
         같은 재료를 써도 누가, 얼마나 정확하게 심느냐에 따라 수명이 달라집니다. 분야별 전문의 6인이 체계적인 협진으로 정밀하게 치료합니다.
       </p>
 
-      <div class="doctor-card" style="background: #fff; border: 1px solid var(--border);">
-        <div class="doctor-photo">
-          <img src="./대표원장 프로필 사진.png" alt="하얀드림치과 의료진" />
-        </div>
+      <div class="doctor-card">
         <div class="doctor-points">
           <span>전문의 6인 협진</span>
           <span>과잉진료 없음</span>
@@ -955,7 +896,7 @@
     </section>
 
     <!-- 7. QUICK CONSULTATION -->
-    <section class="bg-teal" id="consult">
+    <section class="bg-teal-deep" id="consult">
       <div class="text-center">
         <span class="sec-tag">FREE CONSULTATION</span>
         <h2 class="sec-title">미룰수록 잇몸뼈는<br>조금씩 줄어듭니다</h2>
@@ -980,45 +921,6 @@
         <button type="submit" class="btn btn-shine" style="width:100%; height:54px; font-size:16px; margin-top:4px;">무료 비용 상담 신청하기</button>
       </form>
     </section>
-
-    <!-- 8. LOCATION & FOOTER -->
-    <section class="bg-teal-deep">
-      <span class="sec-tag">LOCATION</span>
-      <h2 class="sec-title">오시는 길 안내</h2>
-      <div class="map-wrap">
-        <div class="map-box">
-          <img src="./사진04.jpg" alt="하얀드림치과 오시는 길 약도" />
-        </div>
-        <div class="map-btns">
-          <a href="https://naver.me/GvcPoCP4" target="_blank" rel="noopener noreferrer" class="btn btn-naver">네이버 지도</a>
-          <a href="https://place.map.kakao.com/1857235341" target="_blank" rel="noopener noreferrer" class="btn btn-kakao">카카오맵</a>
-        </div>
-      </div>
-      <div class="location-info">
-        <div>
-          <strong>주소</strong><br>
-          충청북도 청주시 흥덕구 오송읍 오송생명8로 175 다니엘프라자 4층<br><br>
-          <strong>대표전화</strong><br>
-          043-900-5252<br>
-          <a href="https://xn--vb0b92m88dgworxkdhk.com/sub/nonpay.php" target="_blank" rel="noopener noreferrer" class="nonpay-link">비급여</a>
-        </div>
-        <div class="hours-box">
-          <strong>진료시간</strong><br>
-          평일 09:30 - 18:30<br>
-          토요일 09:30 - 14:00<br>
-          점심 13:00 - 14:00<br>
-          일·공휴일 휴진
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <strong>하얀드림치과의원</strong>
-      사업자등록번호 : 614-55-00793<br>
-      주소 : 충청북도 청주시 흥덕구 오송읍 오송생명8로 175 다니엘프라자 4층 | 대표전화 : 043-900-5252<br>
-      ※ 모든 시술은 개인에 따라 염증, 출혈 등의 부작용이 발생할 수 있으므로 의료진과 충분한 상담이 필요합니다.<br><br>
-      COPYRIGHT © 하얀드림치과의원. ALL RIGHTS RESERVED.
-    </footer>
 
     <!-- 하단 고정 바 -->
     <div class="floating-bar">
