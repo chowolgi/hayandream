@@ -594,6 +594,13 @@
       font-size: 12px;
     }
     .agree-box label { display: flex; align-items: center; gap: 6px; cursor: pointer; }
+    .agree-desc {
+      margin-top: 6px;
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.72);
+      line-height: 1.45;
+      word-break: keep-all;
+    }
 
     /* 8. LOCATION & FOOTER */
     .map-wrap {
@@ -716,7 +723,6 @@
       <!-- 자동재생 영상 (worry-bone-loss.webm / worry-bone-loss.mp4) -->
       <div class="worry-video-wrap">
         <video
-          poster="./worry-bone-loss.mp4"
           autoplay
           muted
           loop
@@ -1020,6 +1026,7 @@
         </select>
         <div class="agree-box">
           <label><input type="checkbox" required /> [필수] 개인정보 수집 및 이용 동의</label>
+          <p class="agree-desc">수집항목: 성함, 연락처 | 목적: 임플란트 비용 상담 | 보유기간: 상담 완료 후 지체 없이 파기</p>
         </div>
         <button type="submit" class="btn btn-shine" style="width:100%; height:54px; font-size:16px; margin-top:4px;">무료 비용 상담 신청하기</button>
       </form>
@@ -1090,8 +1097,8 @@
       }
     });
 
-// 상담 폼 제출 처리 (구글 스프레드시트 연동)
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxjcCRbSrn-Xx-HeFNZ8wEKK9MoThcew-hGetKlUGdHDzVDwphN9GnOURaKEFjpsJUprQ/exec';
+    // 상담 폼 제출 처리 (구글 스프레드시트 연동)
+    const SCRIPT_URL = '여기에_복사한_웹앱_URL을_붙여넣으세요';
 
     document.getElementById('consultForm').addEventListener('submit', async function(e) {
       e.preventDefault();
@@ -1105,7 +1112,6 @@
       const phone = `${formData.get('p1')}-${formData.get('p2')}-${formData.get('p3')}`;
       const subject = formData.get('subject');
 
-      // 전송할 데이터 구성 (CORS 프리플라이트 방지용 URLSearchParams)
       const payload = new URLSearchParams();
       payload.append('name', name);
       payload.append('phone', phone);
